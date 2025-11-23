@@ -18,7 +18,7 @@ interface GalleryListResponse {
   page: number;
 }
 
-const API_URL = "http://localhost:4000/api/galleryupload";
+const API_URL = "https://sona-one-backend.onrender.com/api/galleryupload";
 
 // ===============================
 // 🔥 AXIOS INSTANCE WITH TOKEN

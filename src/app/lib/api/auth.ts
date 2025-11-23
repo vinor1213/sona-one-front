@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-const API_URL = "http://localhost:4000/api/auth";
+const API_URL = "https://sona-one-backend.onrender.com/api/auth";
 interface LoginResponse {
   message: string;
   token: string;
