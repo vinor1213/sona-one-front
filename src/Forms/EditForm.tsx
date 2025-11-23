@@ -106,7 +106,7 @@ export default function EditForm({ id, onClose, onUpdated }: Props) {
             <div>
                 <label className="block font-medium">Current Image</label>
                 <img
-                    src={`http://localhost:4000${photo.image}`}
+                    src={`https://sona-one-backend.onrender.com${photo.image}`}
                     className="w-32 h-32 object-cover rounded-lg border"
                 />
             </div>

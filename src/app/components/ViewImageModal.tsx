@@ -52,7 +52,7 @@ export default function ViewImageModal({ open, onClose, image }: any) {
 
           {/* Image */}
           <img
-            src={`http://localhost:4000${image?.image}`}
+            src={`https://sona-one-backend.onrender.com${image?.image}`}
             className="w-full max-h-[70vh] object-contain bg-black"
           />
 
