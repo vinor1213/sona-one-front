@@ -97,12 +97,23 @@ export default function GalleryPage() {
   };
 
   // Delete Photo Handler
-  const onConfirmDelete = async () => {
-    if (!deleteId) return;
-    await deleteGallery(deleteId);
+const onConfirmDelete = async () => {
+  if (!deleteId) return;
+
+  try {
+    await deleteGallery(deleteId); // call your API
     setDeleteId(null);
-    fetchPhotos();
-  };
+    fetchPhotos(); // refresh gallery
+
+    // Show success notification
+    Notiflix.Notify.success("Gallery deleted successfully!");
+  } catch (error: any) {
+    // Show failure notification if API fails
+    Notiflix.Notify.failure(
+      error.response?.data?.message || "Failed to delete gallery"
+    );
+  }
+};
 
 
 
